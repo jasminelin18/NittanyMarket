@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Info</title>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="/main">Home</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/info">Profile</a>
+      </li>
+        <li class="nav-item active">
+        <a class="nav-link" href="/products">Product</a>
+      </li>
+        <li class="nav-item active">
+        <a class="nav-link" href="/sell">Sell</a>
+      </li>
+        <li class="nav-item active">
+        <a class="nav-link" href="/mylistings">My Listings</a>
+      </li>
+        <li class="nav-item active">
+        <a class="nav-link" href="/">Logout</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<style>
+    .btn {
+        background: #08afcb;
+        border-radius: 6px;
+        color: white;
+        font-size: 1rem;
+        font-weight: 300;
+        margin-top: 1rem;
+        padding: 1rem 2rem;
+    }
+</style>
+
+<form action="/info" method="POST">
+<section class="vh-100" style="background-color: #f4f5f7;">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col col-lg-8 mb-4 mb-lg-0">
+        <div class="card mb-3" style="border-radius: .5rem;">
+          <div class="row g-0">
+            <div class="col-md-4 text-center gradient-custom text-center text-black">
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+              <h5>{{error[1]}} {{error[2]}}</h5>
+                <p class="text-muted">{{error[0]}}</p>
+            </div>
+            <div class="col-md-8">
+              <div class="card-body p-4">
+                <h6>Personal Information</h6>
+                <hr class="mt-0 mb-4">
+                <div class="row pt-1">
+                  <div class="col-6 mb-3">
+                    <h6>Age</h6>
+                    <p class="text-muted">{{error[4]}}</p>
+                  </div>
+                  <div class="col-6 mb-3">
+                    <h6>Gender</h6>
+                    <p class="text-muted">{{error[3]}}</p>
+                  </div>
+                    <div class="col-6 mb-3">
+                    <h6>Credit Card</h6>
+                    <p class="text-muted">XXXX-XXXX-XXXX-{{error[15][-4:]}}</p>
+                  </div>
+                    <div class="col-6 mb-3">
+                    <h6>Password</h6>
+                        <label>
+                            <input name="new_password" type="text">
+                        </label>
+                    </div>
+                </div>
+                <h6>Address</h6>
+                <hr class="mt-0 mb-4">
+                <div class="row pt-1">
+                  <div class="col-6 mb-3">
+                    <h6>Home</h6>
+                    <p class="text-muted">{{error[5]}} {{error[6]}} {{error[7]}}, {{error[8]}} {{error[9]}}</p>
+                  </div>
+                  <div class="col-6 mb-3">
+                    <h6>Billing</h6>
+                    <p class="text-muted">{{error[10]}} {{error[11]}} {{error[12]}}, {{error[13]}} {{error[14]}}</p>
+                  </div>
+                </div>
+                  <div class="col-12 text-right">
+                      <button type="submit" class="btn btn-primary">Update Profile</button>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</form>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+</body>
+</html>
